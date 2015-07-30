@@ -65,5 +65,9 @@ module MyPet
     get '/' do
         render 'index'
     end
+
+    post '/send_email' do
+        body 'This is a short body defined right in the mailer itself'
+    end
   end
 end

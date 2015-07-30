@@ -14,21 +14,30 @@
 #   }
 #
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'my_pet_development.db')
-
+  :adapter => 'postgresql',
+  :host => 'localhost',
+  :port => '5432',
+  :username  => ENV['CV_DB_USERNAME'],
+  :password  => ENV['CV_DB_PASSWORD'],
+  :database => 'my_pet_development'
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'my_pet_production.db')
-
+  :adapter => 'postgresql',
+  :host => ENV['CV_DB_HOST'],
+  :port => '5432',
+  :username  => ENV['CV_DB_USERNAME'],
+  :password  => ENV['CV_DB_PASSWORD'],
+  :database => 'my_pet_production'
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'my_pet_test.db')
-
+  :adapter => 'postgresql',
+  :host => 'localhost',
+  :port => '5432',
+  :username  => ENV['CV_DB_USERNAME'],
+  :password  => ENV['CV_DB_PASSWORD'],
+  :database => 'my_pet_test'
 }
 
 # Setup our logger
