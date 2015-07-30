@@ -25,10 +25,10 @@ ActiveRecord::Base.configurations[:development] = {
 ActiveRecord::Base.configurations[:production] = {
   :adapter => 'postgresql',
   :host => ENV['CV_DB_HOST'],
-  :port => '5432',
+  :port => ENV['CV_DB_PORT'],
   :username  => ENV['CV_DB_USERNAME'],
   :password  => ENV['CV_DB_PASSWORD'],
-  :database => 'my_pet_production'
+  :database => ENV['CV_DB']
 }
 
 ActiveRecord::Base.configurations[:test] = {
