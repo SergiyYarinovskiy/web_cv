@@ -34,6 +34,7 @@ module MyPet
 
     access_control.roles_for :admin do |role|
       role.project_module :accounts, '/accounts'
+      role.project_module :settings, '/settings'
     end
 
     # Custom error management 

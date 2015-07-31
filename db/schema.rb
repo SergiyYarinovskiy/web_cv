@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 1) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "role"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "about_me",                default: ""
+    t.string   "experience",              default: ""
+    t.string   "li_link",    limit: 1000, default: ""
+    t.string   "fb_link",    limit: 1000, default: ""
+    t.string   "address",    limit: 255,  default: ""
+    t.string   "skype",      limit: 255,  default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
   end

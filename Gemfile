@@ -25,6 +25,9 @@ gem 'pg'
 # Padrino Stable Gem
 gem 'padrino', '0.12.5'
 
+group :development, :test do
+  gem 'pry'
+end
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
