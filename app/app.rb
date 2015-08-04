@@ -63,11 +63,12 @@ module MyPet
     #   end
     #
     get '/' do
-        render 'index'
+      @settings = Setting.load
+      render 'index'
     end
 
     post '/send_email' do
-        body 'This is a short body defined right in the mailer itself'
+      body 'This is a short body defined right in the mailer itself'
     end
   end
 end

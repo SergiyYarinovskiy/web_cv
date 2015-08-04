@@ -62,7 +62,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 wp1">
             <h1 class="arrow">About me</h1>
-            <p>I moved to Kyiv in December 2014. Before that I worked as freelancer in my hometown. My major speciality is <a target="_blank" href="http://rubyonrails.org">Ruby on Rails</a> web development.</p>
+            <p><%= @settings.about_me.html_safe %></p>
           </div>
         </div>
       </div>
@@ -90,19 +90,7 @@
                 </div>
               </div>
               <div class="col-md-7 wp2 delay-1s text-left">
-                <p>Luxoft, December 2014 – May 2015:<br />
-                - mostly back-end developing;<br />
-                - implementing new feature for limos.com, refactoring old functional;<br />
-                - wrote MySQL queries for migrations;<br />
-                - writing RSpec and automation tests based on Capybara/Cucumber;<br />
-                - everyday meetings with american team.<br />
-                <br />
-                Freelance, November 2013 – December 2014:<br />
-                - front-end and back-end developing;<br />
-                - implementing new feature for coincut.com;<br />
-                - supporting fruity-mail.ru and rtc.ua;<br />
-                - wrote parsers based on REXML and Nokogiri;<br />
-                - added and configured active admin, paperclip, autocomplete widget etc. to project on ruby on rails.</p>
+                <p><%= @settings.experience.html_safe %></p>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -256,25 +244,25 @@
           <div class="col-md-3">
             <div class="light-box box-hover">
               <h2><i class="fa fa-linkedin-square"></i><span>Linkedin</span></h2>
-              <p><a target="_blank" href="https://ua.linkedin.com/pub/sergiy-yarinovskiy/49/72/54a">Visit</a></p>
+              <p><a target="_blank" href="<%= @settings.li_link.html_safe %>">Visit</a></p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="light-box box-hover">
               <h2><i class="fa fa-facebook-square"></i><span>Facebook</span></h2>
-              <p><a target="_blank" href="https://www.facebook.com/sergiy.yarinovskiy">Visit</a></p>
+              <p><a target="_blank" href="<%= @settings.fb_link.html_safe %>">Visit</a></p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="light-box box-hover">
               <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
-              <p>Kyiv, Ukraine</p>
+              <p><%= @settings.address.html_safe %></p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="light-box box-hover">
               <h2><i class="fa fa-skype"></i><span>Skype</span></h2>
-              <p>sergiy.90</p>
+              <p><%= @settings.skype.html_safe %></p>
             </div>
           </div>
         </div>
