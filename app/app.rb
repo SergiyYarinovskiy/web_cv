@@ -70,5 +70,14 @@ module MyPet
     post '/send_email' do
       body 'This is a short body defined right in the mailer itself'
     end
+
+    get '/download_cv' do
+      filename = Setting.load.cv_name
+      if File.exist?("public/#{filename}")
+        send_file "public/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+      else
+        render 'error'
+      end
+    end
   end
 end
