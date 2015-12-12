@@ -1,0 +1,47 @@
+- error = @setting.errors.include?(:about_me)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :about_me, :class => 'control-label'
+  div class='controls'
+    = f.text_field :about_me, :class => 'form-control input-large input-with-feedback', :autofocus => true
+    span class='help-inline' = error ? f.error_message_on(:about_me, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:experience)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :experience, :class => 'control-label'
+  div class='controls'
+    = f.text_field :experience, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:experience, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:li_link)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :li_link, :class => 'control-label'
+  div class='controls'
+    = f.text_field :li_link, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:li_link, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:fb_link)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :fb_link, :class => 'control-label'
+  div class='controls'
+    = f.text_field :fb_link, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:fb_link, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:address)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :address, :class => 'control-label'
+  div class='controls'
+    = f.text_field :address, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:address, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:skype)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :skype, :class => 'control-label'
+  div class='controls'
+    = f.text_field :skype, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:skype, :class => 'text-error') : pat(:example)
+- error = @setting.errors.include?(:cv_name)
+fieldset class='control-group#{error ? ' has-error' : ''}'
+  = f.label :cv_name, :class => 'control-label'
+  div class='controls'
+    = f.text_field :cv_name, :class => 'form-control input-large input-with-feedback'
+    span class='help-inline' = error ? f.error_message_on(:cv_name, :class => 'text-error') : pat(:example)
+
+div class="form-actions"
+  = f.submit pat(:save), :class => 'btn btn-primary'
+  |&nbsp;
+  = link_to pat(:cancel), url(:accounts, :index), :class => 'btn btn-default'

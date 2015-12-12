@@ -24,8 +24,8 @@ module MyPet
     set :admin_model, 'Account'
     set :login_page,  '/sessions/new'
 
-    enable  :sessions
-    disable :store_location
+    enable :sessions
+    enable :store_location
 
     access_control.roles_for :any do |role|
       role.protect '/'

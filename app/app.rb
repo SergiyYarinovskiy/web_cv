@@ -79,5 +79,5 @@ module MyPet
         render 'error'
       end
     end
-  end
-end
+  end # class App
+end # module MyPet

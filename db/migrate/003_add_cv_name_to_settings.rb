@@ -4,6 +4,6 @@ class AddCvNameToSettings < ActiveRecord::Migration
   end
 
   def self.down
-  	remove_column :settings, :cv_name
+    remove_column :settings, :cv_name
   end
 end
